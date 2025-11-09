@@ -1,0 +1,6 @@
+# Evita subir datos sensibles o grandes
+data/
+postgres-data/
+keycloak-data/
+*.log
+*.db
