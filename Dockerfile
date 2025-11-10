@@ -15,5 +15,5 @@ ENV KC_DB=dev-file
 ENV KC_IMPORT=/opt/keycloak/data/import/realm-export.json
 
 EXPOSE 8080
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev", "--http-port=8080", "--hostname-strict=false", "--hostname-strict-https=false", "--proxy=edge"]
 
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev", "--import-realm"]
