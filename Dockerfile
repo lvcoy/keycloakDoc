@@ -18,4 +18,4 @@ ENV KC_IMPORT=/opt/keycloak/data/import/realm-export.json
 EXPOSE 8080
 
 # Inicia Keycloak en modo desarrollo (sin https estricto)
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev", "--http-port=8080", "--hostname-strict=false", "--proxy=edge"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev", "--http-port=8080", "--hostname-strict=false"]
