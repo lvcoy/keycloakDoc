@@ -14,6 +14,8 @@ ENV KC_DB=dev-file
 # Importa el realm automáticamente
 ENV KC_IMPORT=/opt/keycloak/data/import/realm-export.json
 
+# Expone el puerto para Render
 EXPOSE 8080
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev", "--http-port=8080", "--hostname-strict=false", "--hostname-strict-https=false", "--proxy=edge"]
 
+# Inicia Keycloak en modo desarrollo (sin https estricto)
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev", "--http-port=8080", "--hostname-strict=false", "--proxy=edge"]
